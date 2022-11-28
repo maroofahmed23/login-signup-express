@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+   
+
+</head>
+
+<body>
+    <h1>Ali Express</Form></h1>
+
+    <a href="./index.html">Home</a>
+    <a href="./products.html">All Product</a>
+
+
+    <div id="productslist">
+
+        <div>
+            <img src="./img/Shoes.jpg" alt="">
+            <p>Creative content and concept studio based in Copenhagen, Denmark.
+            </p>
+            <p> <span>PKR</span> <span>4000</span> </p>
+            <p> 500 sold </p>
+            <p> Free Shipping </p>
+            <p> Shahrukh Communication </p>
+        </div>
+        <div>
+            <img src="./img/Shoes.jpg" alt="">
+            <p>Creative content and concept studio based in Copenhagen, Denmark.
+            </p>
+            <p> <span>PKR</span> <span>4000</span> </p>
+            <p> 500 sold </p>
+            <p> Free Shipping </p>
+            <p> Shahrukh Communication </p>
+        </div>
+        <div>
+            <img src="./img/Shoes.jpg" alt="">
+            <p>Creative content and concept studio based in Copenhagen, Denmark.
+            </p>
+            <p> <span>PKR</span> <span>4000</span> </p>
+            <p> 500 sold </p>
+            <p> Free Shipping </p>
+            <p> Shahrukh Communication </p>
+        </div>
+
+
+    </div>
+
+
+<script>
+
+    async function getAllProducts() {
+        try {
+        const response = 
+        await axios.get('https://localhost:3000/products');
+        console.log(response.data.data);
+
+  }     catch (error) {
+        console.error(error);
+  }
+    }
+
+    getAllProducts();
+    </script>
+
+
+</body>

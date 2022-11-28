@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
 
 <body>
-<h1>Add a Product</Form></h1>
+<h1>Ali Express</Form></h1>
+
+<a href="./index.html">Home</a>
+<a href="./product.html">All Product</a>
 
 <form onsubmit="createProduct(); return false ">
 
@@ -50,34 +54,26 @@
 
 
 <script>
-
     function createProduct(){
 
-        letproductName
-        productPrice
-        currencyCode
-        numberOfSale
-        rating
-        isFreeShipping
-        shopName
+        let productName = document.querySelector("#productName").valuel;
+        let productPrice = document.querySelector("#productPrice").valuel;
+        let currencyCode = document.querySelector("#currencyCode").valuel;
+        let numberOfSale = document.querySelector("#numberOfSale").valuel;
+        let rating = document.querySelector("#rating").valuel;
+        let isFreeShipping = document.querySelector("#isFreeShipping").valuel;
+        let shopName = document.querySelector("#shopName").valuel;
         
-        var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        var repeatPassword = document.getElementById('repeatPassword').value;
-    
-        if (password !== repeatPassword) {
-                document.querySelector("#message").innerHTML = 'Passwords do not match, please try again';
-                return;
-            }
-
+        
             axios.post('http://localhost:3000/signup', {
 
-                firstName,
-                lastName,
-                email,
-                password,
+                productName,
+                productPrice,
+                currencyCode,
+                numberOfSale,
+                rating,
+                isFreeShipping,
+                shopName,
 
             })
                 .then(function (response) {
@@ -91,8 +87,7 @@
         }
     
 
-</script>
+    </script>
 
 
 </body>
-</html>
